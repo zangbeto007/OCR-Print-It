@@ -1,19 +1,23 @@
 const slides = [
 	{
 		"image":"slide1.jpg",
-		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>"
+		"tagLine":"Impressions tous formats <span>en boutique et en ligne</span>",
+		"alt": "Impressions tous formats en boutique et en ligne",
 	},
 	{
 		"image":"slide2.jpg",
-		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>"
+		"tagLine":"Tirages haute définition grand format <span>pour vos bureaux et events</span>",
+		"alt": "Tirages haute définition grand format pour vos bureaux et events",
 	},
 	{
 		"image":"slide3.jpg",
-		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>"
+		"tagLine":"Grand choix de couleurs <span>de CMJN aux pantones</span>",
+		"alt": "Grand choix de couleurs de CMJN aux pantones",
 	},
 	{
 		"image":"slide4.png",
-		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>"
+		"tagLine":"Autocollants <span>avec découpe laser sur mesure</span>",
+		"alt": "Autocollants avec découpe laser sur mesure",
 	}
 ]
 
@@ -41,7 +45,7 @@ let slideIndex = 0;
 // On crée une fonction changeSlide pour mettre à jour l'image et le texte du slider au clic sur les flèches
 function changeSlide() {
 	bannerImg.src = `./assets/images/slideshow/${slides[slideIndex].image}`;
-	bannerImg.setAttribute("alt", slides[slideIndex].tagLine);
+	bannerImg.setAttribute("alt", slides[slideIndex].alt);
 	bannerText.innerHTML = slides[slideIndex].tagLine;
 }
 // CRÉATION DES ÉCOUTEURS D'ÉVÉNEMENT POUR RENDRE LES FLÈCHES DYNAMIQUES AU CLIC
